@@ -313,4 +313,12 @@ trait TSelectionFormField
     {
         return true;
     }
+
+    /**
+     * Returns whether the option list contains an option mathing the given key.
+     */
+    public function containsOptionKey(string|int|float $key): bool
+    {
+        return \array_key_exists($key, $this->getOptions());
+    }
 }
